@@ -4,9 +4,16 @@
      xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
      xsi:schemaLocation = "http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-<bean id="s1" class="com.tns.di.Student">
-<constructor-arg name="studentName" value="Prerana Kokil"/>
-<constructor-arg name="id" value="101"/>
+<bean id="objectMathCheat" class="com.tns.di1.Cheat"/>
+
+<bean id="s1" class="com.tns.di1.Student1">
+<property name="c" ref="objectMathCheat">
+</property>
+</bean>
+
+<bean id="s2" class="com.tns.di1.AnotherStudent">
+<property name="c" ref="objectMathCheat" >
+</property>
 </bean>
 
 
